@@ -20,17 +20,53 @@
       <javafakerVersion>1.0.2</javafakerVersion>
       <projectlambokVersion>1.18.42</projectlambokVersion>
       <apacheCommonLangsVersion>3.20.0</apacheCommonLangsVersion>
-
-
+      <cucumber-java-version>7.34.2</cucumber-java-version>
+      <cucumber-testng-version>7.34.2</cucumber-testng-version>
+      <log4JVersion>1.2.17</log4JVersion>
+      <poi-xml-version>5.5.1</poi-xml-version>
+      <jsonSchemaValidatorVersion>6.0.0</jsonSchemaValidatorVersion>
   </properties>
 
+
   <dependencies>
+
+      <!-- Source: https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+      <dependency>
+          <groupId>io.rest-assured</groupId>
+          <artifactId>json-schema-validator</artifactId>
+          <version>${jsonSchemaValidatorVersion}</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-ooxml</artifactId>
+          <version>${poi-xml-version}</version>
+          <scope>compile</scope>
+      </dependency>
+      <!-- Source: https://mvnrepository.com/artifact/log4j/log4j -->
+      <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>${log4JVersion}</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+      <dependency>
+          <groupId>io.cucumber</groupId>
+          <artifactId>cucumber-testng</artifactId>
+          <version>${cucumber-testng-version}</version>
+          <scope>compile</scope>
+      </dependency>
+
       <!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
       <dependency>
           <groupId>org.testng</groupId>
           <artifactId>testng</artifactId>
           <version>${testngVersion}</version>
-          <scope>test</scope>
+
       </dependency>
 
       <!-- Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
@@ -38,7 +74,6 @@
           <groupId>io.rest-assured</groupId>
           <artifactId>rest-assured</artifactId>
           <version>${restAssuredVersion}</version>
-          <scope>test</scope>
       </dependency>
 
       <!-- Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
@@ -89,6 +124,26 @@
           <scope>compile</scope>
       </dependency>
 
+      <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+      <dependency>
+          <groupId>io.cucumber</groupId>
+          <artifactId>cucumber-java</artifactId>
+          <version>${cucumber-java-version}</version>
+          <scope>compile</scope>
+      </dependency>
+
 
   </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

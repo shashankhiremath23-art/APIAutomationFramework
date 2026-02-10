@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.pom</groupId>
+  <artifactId>APIAutomationFramework</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>APIAutomationFramework</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <testngVersion>7.11.0</testngVersion>
+      <restAssuredVersion>6.0.0</restAssuredVersion>
+      <jackson-databindVersion>2.21.0</jackson-databindVersion>
+      <gsonVersion>2.13.2</gsonVersion>
+      <extentReportsVersion>5.1.2</extentReportsVersion>
+      <javafakerVersion>1.0.2</javafakerVersion>
+      <projectlambokVersion>1.18.42</projectlambokVersion>
+      <apacheCommonLangsVersion>3.20.0</apacheCommonLangsVersion>
+
+
+  </properties>
+
+  <dependencies>
+      <!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
+      <dependency>
+          <groupId>org.testng</groupId>
+          <artifactId>testng</artifactId>
+          <version>${testngVersion}</version>
+          <scope>test</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+      <dependency>
+          <groupId>io.rest-assured</groupId>
+          <artifactId>rest-assured</artifactId>
+          <version>${restAssuredVersion}</version>
+          <scope>test</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>${jackson-databindVersion}</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+      <dependency>
+          <groupId>com.google.code.gson</groupId>
+          <artifactId>gson</artifactId>
+          <version>${gsonVersion}</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+      <dependency>
+          <groupId>com.aventstack</groupId>
+          <artifactId>extentreports</artifactId>
+          <version>${extentReportsVersion}</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+      <dependency>
+          <groupId>com.github.javafaker</groupId>
+          <artifactId>javafaker</artifactId>
+          <version>${javafakerVersion}</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>${projectlambokVersion}</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <!-- Source: https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>${apacheCommonLangsVersion}</version>
+          <scope>compile</scope>
+      </dependency>
+
+
+  </dependencies>
+</project>

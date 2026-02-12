@@ -7,11 +7,14 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
+
+
   <name>APIAutomationFramework</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
       <testngVersion>7.11.0</testngVersion>
       <restAssuredVersion>6.0.0</restAssuredVersion>
       <jackson-databindVersion>2.21.0</jackson-databindVersion>
@@ -25,10 +28,17 @@
       <log4JVersion>1.2.17</log4JVersion>
       <poi-xml-version>5.5.1</poi-xml-version>
       <jsonSchemaValidatorVersion>6.0.0</jsonSchemaValidatorVersion>
+      <log4J-api-version>2.22.0</log4J-api-version>
   </properties>
 
 
   <dependencies>
+
+      <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-api</artifactId>
+          <version>${log4J-api-version}</version>
+      </dependency>
 
       <!-- Source: https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
       <dependency>
@@ -140,8 +150,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>9</source>
-                    <target>9</target>
+                    <source>15</source>
+                    <target>15</target>
                 </configuration>
             </plugin>
         </plugins>

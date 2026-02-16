@@ -7,10 +7,10 @@ public class EnvManager {
         String env = System.getProperty("env", "dev");
 
 
-        switch (env) {
-            case "sit": return "https://sit-bank-api.com";
-            case "uat": return "https://uat-bank-api.com";
-            default: return "https://dev-bank-api.com";
-        }
+        return switch (env) {
+            case "sit" -> "https://sit-bank-api.com";
+            case "uat" -> "https://uat-bank-api.com";
+            default -> "https://dev-bank-api.com";
+        };
     }
 }

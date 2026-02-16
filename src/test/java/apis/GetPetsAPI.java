@@ -12,12 +12,17 @@ public class GetPetsAPI extends BaseAPI {
 
     public Response getPetsAPI(String userName) {
 
-        Response response = request
-                .baseUri(ConfigManager.get("pets.URl"))
-                .pathParam("userName", userName)
-                .log().all()
-                .get("/user/{userName}");
+        logInfo("Calling GET USER API");
 
-        return response;
+        overrideBaseURI(ConfigManager.get("pets.url"));
+
+        return request()
+                .pathParam("username", userName)
+                .when()
+                .get("/user/{username}")
+                .then()
+                .extract()
+                .response();
     }
+
 }

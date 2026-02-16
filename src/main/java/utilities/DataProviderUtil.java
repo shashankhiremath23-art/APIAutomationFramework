@@ -26,14 +26,19 @@ public class DataProviderUtil {
                 sheetName
         );
 
+    }
 
+    @DataProvider(name = "createUserData")
+    public Object[][] getUserData(Method method) {
+        // Fetching file path from your ConfigManager as seen in your existing code
+        String filePath = Objects.requireNonNull(
+                getClass().getClassLoader().getResource(ConfigManager.get("testdataexcel.file")),
+                "Excel file not found in resources!"
+        ).getPath();
 
-        //String path = getClass().getClassLoader().getResource(ConfigManager.get("testdata.path")).getPath();
-       /* return ExcelUtil.getTestData(
-                ConfigManager.get("testDataExcel.path"),
-                "GetPetsAPI"
-        );
+        // You can use a specific sheet name like "PostApiTestData" seen in your excel file
+        String sheetName = ConfigManager.get(method.getName()+".sheet");
 
-        */
+        return ExcelUtil.getTestData(filePath, sheetName);
     }
 }

@@ -6,15 +6,31 @@
         <listener class-name="reporting.TestListener"/>
     </listeners>
 
-    <test name="API Tests">
-
+    <test name = "API Tests">
+<!--        <parameter name="browser" value="chrome" />-->
 
         <classes>
-            <class name="tests.CreateUserAPITests"/>
-            <class name="tests.GetPetsAPITests"/>
+            <class name="tests.CreateUserAPITests" />
+            <class name="tests.GetPetsAPITests" />
         </classes>
-
     </test>
+
+<!--    <test name="Edge Tests">-->
+<!--        <parameter name="browser" value="edge" />-->
+
+<!--        <classes>-->
+<!--            <class name="uitests.UITests" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Safari Tests">-->
+<!--        <parameter name="browser" value="safari" />-->
+
+<!--        <classes>-->
+<!--            <class name="uitests.UITests" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
 
 
 

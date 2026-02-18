@@ -14,18 +14,12 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 
 public class GetPetsAPITests extends GetPetsAPI {
 
-    //GetPetsAPI api;
-    SoftAssert softAssert;
 
-    @BeforeClass
-    public void setup(){
-        //api = new GetPetsAPI();
-        new SoftAssert();
-    }
 
 
     @Test(groups = "smoke", priority = 1, dataProvider = "petsData", dataProviderClass = DataProviderUtil.class)
     public void getPetsAPITest(String userName, String expectedStatus, String expectedMessage) {
+        SoftAssert softAssert = new SoftAssert();
         logInfo("Starting GetPetsAPITest for user: " + userName);
         logInfo("Expected message: " + expectedMessage);
 
